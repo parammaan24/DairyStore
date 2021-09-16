@@ -1,0 +1,23 @@
+﻿@model IEnumerable<DairyStore.Models.Product>
+
+@{
+    ViewData["Title"] = "productItems";
+    }
+                      <div class="container">
+                          
+
+                          <div class="row">
+                              @foreach (var item in Model) {
+                              <div class="col-md-12">
+                                  <img src="https://www.dairyfoods.com/ext/resources/DF/2020/August/df-100/GettyImages-1194287257.jpg?1597726305" class="float-left" />
+                                  <h1>@Html.DisplayFor(modelItem => item.Ditem)</h1>
+                                  <p><a href="@Url.Action("Create","Orders")">Buy Now </a></p>
+                              </div>
+                                    }
+
+                          </div>
+
+                      </div>
+
+
+      
